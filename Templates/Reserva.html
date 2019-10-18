@@ -1,122 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{%extends 'Nucleo.html'%} 
+{%load static%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Beauty&Care</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/flexboxgrid.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Allura&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+{%block cuerpo%}
 
-</head>
 
-<body>
-    <div class="esquema-reserva">
-        <header>
-            <div class="contenedor">
-                <div class="row">
-                    <div class="topnav ">
-                        <a href="#home" class="active">
-                                            Beauty&Care
-                                        </a>
-                        <!-- Navigation links (hidden by default) -->
-                        <div id="myLinks">
-                            <a href="Reserva.html">Reservas</a>
-                            <a href="Productos.html">Productos</a>
-                            <a href="Servicios.html">Servicios</a>
-                            <a href="Contacto.html">Contacto</a>
-                        </div>
-                        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>
-                    <div id="contenedor-logo" class="col-xs-4">
-                        <a href="Esquema.html"><img id="logo3" src="imagenes/logofinal.jpg" alt=""></a>
-                    </div>
-                    <div id="contenedor-nav" class="col-xs-12 col-sm-8">
-                        <div id="contenedor-registro">
-                            <div id="ingresa" class="hijo2 col-xs-2">
-                                <a href="">Ingresa</a>
-                            </div>
-                            <div id="registro" class="hijo2 col-xs-2">
-                                <a href="Registro.html">Registro</a>
-                            </div>
-                        </div>
-                        <nav>
-                            <ul>
-                                <li class="listaMenu col-xs-2"><a href="Reserva.html">Reservas</a></li>
-                                <li class="listaMenu col-xs-2"><a href="Productos.html">Productos</a></li>
-                                <li class="listaMenu col-xs-2"><a href="Servicios.html">Servicios</a></li>
-                                <li class="listaMenu col-xs-2"><a href="Contacto.html">Contacto</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-
-            </div>
-        </header>
         <div>
             <h2 id="reserva"> Reserva tu Hora</h2>
         </div>
-        <!-- <div class="tabla-reserva">
-            <div class="contenedor-tabla-dia">
-                <div>Lunes</div>
-                <div>Martes</div>
-                <div>Miercoles</div>
-                <div>Jueves</div>
-                <div>Viernes</div>
-                <div>Sabado</div>
-            </div>
-            <div class="contenedor-tabla-hora">
-                <div>09:00-11:00</div>
-                <div>09:00-11:00</div>
-                <div>09:00-11:00</div>
-                <div>09:00-11:00</div>
-                <div>09:00-11:00</div>
-                <div>09:00-11:00</div>
-                <div>11:00-13:00</div>
-                <div>11:00-13:00</div>
-                <div>11:00-13:00</div>
-                <div>11:00-13:00</div>
-                <div>11:00-13:00</div>
-                <div>11:00-13:00</div>
-                <div>Descanso</div>
-                <div>Descanso</div>
-                <div>Descanso</div>
-                <div>Descanso</div>
-                <div>Descanso</div>
-                <div>Descanso</div>
-                <div>14:00-16:00</div>
-                <div>14:00-16:00</div>
-                <div>14:00-16:00</div>
-                <div>14:00-16:00</div>
-                <div>14:00-16:00</div>
-                <div>14:00-16:00</div>
-                <div>16:00-18:00</div>
-                <div>16:00-18:00</div>
-                <div>16:00-18:00</div>
-                <div>16:00-18:00</div>
-                <div>16:00-18:00</div>
-                <div>16:00-18:00</div>
-                <div>18:00-20:00</div>
-                <div>18:00-20:00</div>
-                <div>18:00-20:00</div>
-                <div>18:00-20:00</div>
-                <div>18:00-20:00</div>
-                <div>18:00-20:00</div>
-
-            </div>
-        </div>-->
 
         <div class="tabla2">
             <table>
@@ -191,38 +81,5 @@
                 <button id="button-registrar" class="button button2" onclick="alerta()">Aceptar</button>
             </div>
         </div>
-        <footer class="row">
-            <div class="divfooter col-xs-12 col-sm-6" id="contacto">
-                <div>
-                    <p>
-                        <div class="div-contacto">Encuentranos en av siempreviva #123</div>
-                        <div class="div-contacto">Telefonos: +56912345678 +56998765432</div>
-                        <div class="div-contacto">Horarios: Lunes-viernes 09:00 - 18:00 horas</div>
-                    </p>
-                </div>
-            </div>
-            <div id="redes" class="divfooter col-xs-12 col-sm-6">
-                <ul id="listaredes">
-                    <li class="redes">
-                        <a href="https://www.facebook.com/?stype=lo&jlou=AfdkAHSVHs-9iofFZZJ4wXCQnniVxUBgJDR0p7QIquWo1Ib-tKU-qqCylf4G-eUXM-GiVlOv2d6jiGPWxgW4z5ZHu4S_CK9Cajt4-0snW7pSzA&smuh=27414&lh=Ac9W__M7K6PZ5mCH" target="_blank">
-                            <img class="iconosr" src="imagenes/facebook.png" alt=""></a>
-                    </li>
-                    <li class="redes">
-                        <a href="https://www.instagram.com" target="_blank">
-                            <img class="iconosr" src="imagenes/instagram.png" alt="">
-                        </a>
-                    </li>
-                    <li class="redes">
-                        <a href="https://www.twitter.com" target="_blank">
-                            <img class="iconosr" src="imagenes/twitter.png" alt="">
-                        </a>
 
-                    </li>
-                </ul>
-            </div>
-        </footer>
-    </div>
-    <script src="js/proyecto.js"></script>
-</body>
-
-</html>
+{%endblock cuerpo%}

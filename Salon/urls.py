@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from Apps.Usuarios.views import mostrarIndex
+from Apps.Usuarios.views import mostrarIndex, mostrarServicios
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',mostrarIndex,name='vistaPrincipal'),
-    path('servicio/',include('Apps.Servicios.urls','servicios'))
+    path('servicio/',include('Apps.Servicios.urls','servicios')),
+    path('Servicios/',mostrarServicios,name='vistaServicios')
 ] 

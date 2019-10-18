@@ -1,233 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
+{%extends 'Nucleo.html'%} 
+{%load static%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BeautyStyle</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'css/flexboxgrid.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Allura&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-
-
-</head>
-
-<body>tercer cambio</h1>
-    <div class="contenedor">
-        <header>
-            <div class="contenedor">
-                <div class="row">
-                    <div class="topnav ">
-                        <a href="Esquema.html" class="active">
-                                            Beauty&Care
-                                        </a>
-                        <!-- Navigation links (hidden by default) -->
-                        <div id="myLinks">
-                            <a href="{% url 'Servicios:reservar' %}">Reservas</a>
-                            <a href="Productos.html">Productos</a>
-                            <a href="Servicios.html">Servicios</a>
-                            <a href="Contacto.html">Contacto</a>
-                        </div>
-                        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>
-                    <div id="contenedor-logo" class="col-xs-4">
-                        <img id="logo3" src="{% static 'imagenes/logofinal.jpg' %}" alt="">
-                    </div>
-                    <div id="contenedor-nav" class="col-xs-12 col-sm-8">
-                        <div id="contenedor-registro">
-                            <div id="ingresa" class="hijo2 col-xs-2">
-                                <a href="">Ingresa</a>
-                            </div>
-                            <div id="registro" class="hijo2 col-xs-2">
-                                <a href="Registro.html">Registro</a>
-                            </div>
-                        </div>
-                        <nav>
-                            <ul>
-                                <li class="listaMenu col-xs-2"><a href="Reserva.html">Reservas</a></li>
-                                <li class="listaMenu col-xs-2"><a href="Productos.html">Productos</a></li>
-                                <li class="listaMenu col-xs-2"><a href="Servicios.html">Servicios</a></li>
-                                <li class="listaMenu col-xs-2"><a href="Contacto.html">Contacto</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+{%block cuerpo%}
+<div>
+    <div class="row" id="carrusel">
+        <div class="col-xs-12">
+            <div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img class="img-slider" src="{% static 'imagenes/imagen1.jpg' %}" alt="Carrusel 1">
                 </div>
-
-            </div>
-        </header>
-        <div>
-            <div class="row" id="carrusel">
-                <div class="col-xs-12">
-                    <div class="slideshow-container">
-                        <!-- Full-width images with number and caption text -->
-                        <div class="mySlides fade">
-                            <img class="img-slider" src="{% static 'imagenes/imagen1.jpg' %}" alt="Carrusel 1">
-                        </div>
-                        <div class="mySlides fade">
-                            <img class="img-slider" src="{% static 'imagenes/imagen2.jpg' %}" alt="Carrusel 2">
-                        </div>
-                        <div class="mySlides fade">
-                            <img class="img-slider" src="{% static 'imagenes/imagen3.jpg' %}" alt="Carrusel 3">
-                        </div>
-                    </div>
+                <div class="mySlides fade">
+                    <img class="img-slider" src="{% static 'imagenes/imagen2.jpg' %}" alt="Carrusel 2">
                 </div>
-            </div>
-            <div id="titulo">
-                Salon de Belleza BeautyStyle
-            </div>
-
-            <div class="row">
-                <div class="relleno">
-                    <div class="cosa">
-                        <p>El cabello es un lienzo en el que materializar la creatividad.</p>
-                    </div>
-                    <div class="cosa">
-                        <p>El método es apreciado internacionalmente, se expresa en técnicas exclusivas.</p>
-                    </div>
-                    <div class="cosa">
-                        <p>El poder del cabello como un arma de seducción sin límites ni restricciones.</p>
-                    </div>
-                    <div class="cosa">
-                        <p>La importancia de la generosidad, la honestidad y la responsabilidad social como pilares de la marca.</p>
-                    </div>
+                <div class="mySlides fade">
+                    <img class="img-slider" src="{% static 'imagenes/imagen3.jpg' %}" alt="Carrusel 3">
                 </div>
-                <section id="section" class="col-xs-12 col-sm-9">
-                    <div class="galeria">
-                        <div class="galeria-item">
-                            <img class="img-galeria" src="imagenes/cabello2.jpg" alt="">
-                            <div class="overlay">
-                                <div class="text">Conoce nuestros servicios</div>
-                            </div>
-                        </div>
-                        <div class="galeria-item">
-                            <img class="img-galeria" src="{% static 'imagenes/cabello3.jpg' %}" alt="">
-                            <div class="overlay">
-                                <div class="text">Conoce nuestros servicios</div>
-                            </div>
-                        </div>
-                        <div class="galeria-item">
-                            <img class="img-galeria" src="imagenes/cabello4.jpg" alt="">
-                            <div class="overlay">
-                                <div class="text">Conoce nuestros servicios</div>
-                            </div>
-                        </div>
-                        <div class="galeria-item">
-                            <img class="img-galeria" src="imagenes/cara2.jpg" alt="">
-                            <div class="overlay">
-                                <div class="text">Conoce nuestros servicios</div>
-                            </div>
-                        </div>
-                        <div class="galeria-item">
-                            <img class="img-galeria" src="imagenes/cara3.jpg" alt="">
-                            <div class="overlay">
-                                <div class="text">Conoce nuestros servicios</div>
-                            </div>
-                        </div>
-                        <div class="galeria-item">
-                            <img class="img-galeria" src="imagenes/servicio.jpg" alt="">
-                            <div class="overlay">
-                                <div class="text">Conoce nuestros servicios</div>
-                            </div>
-                        </div>
-                        <div class="galeria-item">
-                            <img class="img-galeria" src="imagenes/corte1.jpg" alt="">
-                            <div class="overlay">
-                                <div class="text">Conoce nuestros servicios</div>
-                            </div>
-                        </div>
-                        <div class="galeria-item">
-                            <img class="img-galeria" src="imagenes/peinado.jpg" alt="">
-                            <div class="overlay">
-                                <div class="text">Conoce nuestros servicios</div>
-                            </div>
-                        </div>
-                        <div class="galeria-item">
-                            <img class="img-galeria" src="imagenes/img3.jpg" alt="">
-                            <div class="overlay">
-                                <div class="text">Prueba nuestros Productos</div>
-                            </div>
-                        </div>
-                        <div class="galeria-item">
-                            <img class="img-galeria" src="imagenes/img5.jpg" alt="">
-                            <div class="overlay">
-                                <div class="text">Comenta en nuestras Redes</div>
-                            </div>
-                        </div>
-                        <div class="galeria-item">
-                            <img class="img-galeria" src="imagenes/img1.jpg" alt="">
-                            <div class="overlay">
-                                <div class="text"></div>
-                            </div>
-                        </div>
-                        <div class="galeria-item">
-                            <img class="img-galeria" src="imagenes/img2.jpg" alt="">
-                            <div class="overlay">
-                                <div class="text">Conoce nuestros servicios</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <aside class="col-xs-12 col-sm-3">
-                    <div id="contenedor-mapa">
-                        <iframe id="iframe-mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2354.2214659145375!2d-70.64946962374266!3d-33.43961542877573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a23acf82db%3A0x137e827507380444!2sSal%C3%B3n%20de%20Belleza!5e0!3m2!1ses!2scl!4v1567569642694!5m2!1ses!2scl"></iframe>
-                    </div>
-                </aside>
-                <div class="container">
-                    <img src="imagenes/portada2.jpg" alt="Notebook">
-                    <div class="content">
-                        <h1>Es lo mejor de la vida</h1>
-                        <p>El tratamiento y los cuidados son fabulosos, es mi salon favorito</p>
-                    </div>
-                </div>
-
             </div>
         </div>
-        <footer class="row">
-            <div class="divfooter col-xs-12 col-sm-6" id="contacto">
-                <div>
-                    <div class="div-contacto">Encuentranos en av siempreviva #123</div>
-                    <div class="div-contacto">Telefonos: +56912345678 +56998765432</div>
-                    <div class="div-contacto">Horarios: Lunes-viernes 09:00 - 18:00 horas</div>
+    </div>
+    <div id="titulo">
+        Salon de Belleza BeautyStyle
+    </div>
+
+    <div class="row">
+        <div class="relleno">
+            <div class="cosa">
+                <p>El cabello es un lienzo en el que materializar la creatividad.</p>
+            </div>
+            <div class="cosa">
+                <p>El método es apreciado internacionalmente, se expresa en técnicas exclusivas.</p>
+            </div>
+            <div class="cosa">
+                <p>El poder del cabello como un arma de seducción sin límites ni restricciones.</p>
+            </div>
+            <div class="cosa">
+                <p>La importancia de la generosidad, la honestidad y la responsabilidad social como pilares de la marca.</p>
+            </div>
+        </div>
+        <section id="section" class="col-xs-12 col-sm-9">
+            <div class="galeria">
+                <div class="galeria-item">
+                    <img class="img-galeria" src="imagenes/cabello2.jpg" alt="">
+                    <div class="overlay">
+                        <div class="text">Conoce nuestros servicios</div>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img class="img-galeria" src="{% static 'imagenes/cabello3.jpg' %}" alt="">
+                    <div class="overlay">
+                        <div class="text">Conoce nuestros servicios</div>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img class="img-galeria" src="imagenes/cabello4.jpg" alt="">
+                    <div class="overlay">
+                        <div class="text">Conoce nuestros servicios</div>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img class="img-galeria" src="{% static 'imagenes/cara2.jpg' %}" alt="">
+                    <div class="overlay">
+                        <div class="text">Conoce nuestros servicios</div>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img class="img-galeria" src="imagenes/cara3.jpg" alt="">
+                    <div class="overlay">
+                        <div class="text">Conoce nuestros servicios</div>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img class="img-galeria" src="imagenes/servicio.jpg" alt="">
+                    <div class="overlay">
+                        <div class="text">Conoce nuestros servicios</div>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img class="img-galeria" src="imagenes/corte1.jpg" alt="">
+                    <div class="overlay">
+                        <div class="text">Conoce nuestros servicios</div>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img class="img-galeria" src="imagenes/peinado.jpg" alt="">
+                    <div class="overlay">
+                        <div class="text">Conoce nuestros servicios</div>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img class="img-galeria" src="imagenes/img3.jpg" alt="">
+                    <div class="overlay">
+                        <div class="text">Prueba nuestros Productos</div>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img class="img-galeria" src="imagenes/img5.jpg" alt="">
+                    <div class="overlay">
+                        <div class="text">Comenta en nuestras Redes</div>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img class="img-galeria" src="imagenes/img1.jpg" alt="">
+                    <div class="overlay">
+                        <div class="text"></div>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img class="img-galeria" src="imagenes/img2.jpg" alt="">
+                    <div class="overlay">
+                        <div class="text">Conoce nuestros servicios</div>
+                    </div>
                 </div>
             </div>
-            <div id="redes" class="divfooter col-xs-12 col-sm-6">
-
-                <ul id="listaredes">
-                    <li class="redes">
-                        <a href="https://www.facebook.com/?stype=lo&jlou=AfdkAHSVHs-9iofFZZJ4wXCQnniVxUBgJDR0p7QIquWo1Ib-tKU-qqCylf4G-eUXM-GiVlOv2d6jiGPWxgW4z5ZHu4S_CK9Cajt4-0snW7pSzA&smuh=27414&lh=Ac9W__M7K6PZ5mCH" target="_blank">
-                            <img class="iconosr" src="imagenes/facebook.png" alt=""></a>
-                    </li>
-                    <li class="redes">
-                        <a href="https://www.instagram.com" target="_blank">
-                            <img class="iconosr" src="imagenes/instagram.png" alt="">
-                        </a>
-                    </li>
-                    <li class="redes">
-                        <a href="https://www.twitter.com" target="_blank">
-                            <img class="iconosr" src="imagenes/twitter.png" alt="">
-                        </a>
-
-                    </li>
-                </ul>
-                <button onclick="topFunction()" id="myBtn" title="Go to top">Subir</button>
+        </section>
+        <aside class="col-xs-12 col-sm-3">
+            <div id="contenedor-mapa">
+                <iframe id="iframe-mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2354.2214659145375!2d-70.64946962374266!3d-33.43961542877573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a23acf82db%3A0x137e827507380444!2sSal%C3%B3n%20de%20Belleza!5e0!3m2!1ses!2scl!4v1567569642694!5m2!1ses!2scl"></iframe>
             </div>
-        </footer>
-    </div>
-    <script src="{% static 'js/proyecto.js' %}"></script>
-</body>
+        </aside>
+        <div class="container">
+            <img src="imagenes/portada2.jpg" alt="Notebook">
+            <div class="content">
+                <h1>Es lo mejor de la vida</h1>
+                <p>El tratamiento y los cuidados son fabulosos, es mi salon favorito</p>
+            </div>
+        </div>
 
-</html>
+    </div>
+</div>
+
+{%endblock cuerpo%}
