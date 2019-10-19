@@ -52,14 +52,14 @@
                                 <a href="">Ingresa</a>
                             </div>
                             <div id="registro" class="hijo2 col-xs-2">
-                                <a href="Registro.html">Registro</a>
+                                <a href="{% url 'vistaRegistro' %}">Registro</a>
                             </div>
                         </div>
                         <nav>
                             <ul>
-                                <li class="listaMenu col-xs-2"><a href="{% url 'vistaServicios' %}">Reservas</a></li>
+                                <li class="listaMenu col-xs-2"><a href="{% url 'vistaReserva' %}">Reservas</a></li>
                                 <li class="listaMenu col-xs-2"><a href="Productos.html">Productos</a></li>
-                                <li class="listaMenu col-xs-2"><a href="Servicios.html">Servicios</a></li>
+                                <li class="listaMenu col-xs-2"><a href="{% url 'vistaServicios' %}">Servicios</a></li>
                                 <li class="listaMenu col-xs-2"><a href="Contacto.html">Contacto</a>
                                 </li>
                             </ul>
